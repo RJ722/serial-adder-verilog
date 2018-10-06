@@ -16,7 +16,7 @@ module serial_adder(data_a, data_b, clk, reset, out, cout);
   piso piso_a(clk, enable, reset, data_a, wire_a);
   piso piso_b(clk, enable, reset, data_b, wire_b);
   full_adder adder(wire_a, wire_b, cin, sum, cout_temp);
-  d_flipflop dff(cout, clk, enable, reset, cin);
+  d_flipflop dff(cout_temp, clk, enable, reset, cin);
 
 
   always @ (posedge clk or posedge reset) begin

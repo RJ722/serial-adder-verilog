@@ -15,8 +15,8 @@ module serial_adder_tb;
     $dumpfile("serial_adder_tb.vcd");
     $dumpvars(0, serial_adder_tb);
     clk = 0;
-    data_a = 4'b1111; data_b = 4'b1111; reset = 1; #20;
-    data_a = 4'b1111; data_b = 4'b1111; reset = 0; #200;
+    data_a = 4'b1111; data_b = 4'b0000; reset = 1; #20;
+    data_a = 4'b1100; data_b = 4'b1101; reset = 0; #200;
     $finish;
   end
 
