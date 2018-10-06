@@ -18,7 +18,6 @@ module serial_adder(data_a, data_b, clk, reset, out, cout);
   full_adder adder(wire_a, wire_b, cin, sum, cout_temp);
   d_flipflop dff(cout_temp, clk, enable, reset, cin);
 
-
   always @ (posedge clk or posedge reset) begin
     if (reset) begin
       enable = 1; count = 3'b000; out = 4'b0000;
